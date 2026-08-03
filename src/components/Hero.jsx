@@ -1,5 +1,5 @@
 import { Box, Flex, Icon, Link, Marquee, Span, Text } from "@chakra-ui/react";
-import { Link as scrollLink } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import Header from "./Header";
 import { ButtonCard } from "./ReusableCards";
 import { skillSet } from "../data";
@@ -38,38 +38,39 @@ const Hero = () => {
                     <Text maxW='lg' color='gray.300' mt='2' fontSize={{ base: 'xs', md: 'sm' }} fontFamily='Poppins' lineHeight='tall'> I’m a frontend developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building responsive web applications. </Text>
                     
                     {/* Buttons */}
-                    <Flex gap={{ base: '3', md: '6' }} mt='8' justifySelf={{ base: 'center', md: 'start' }} direction={{ base: 'column', md: 'row' }}>
+                    <Flex
+                        direction={{ base: 'column', md: 'row' }}
+                        gap={{ base: '3', md: '6' }} mt='8' /* justifySelf={{ base: 'center', md: 'start' }}  */
+                        align={{ base: "center", md: "flex-start" }}
+                    >
                         {/* Download CV Button*/}
                         <ButtonCard
+                            as={Link}
+                            href="/Alewi-Rhoda-Frontend-Developer-Resume.pdf" download
                             px={{ base: '6', md: '8' }}
                             py='5'
-                            w='42'
                             position='relative'
                             _hover={{
                                 bgGradient: "to-r",
                                 gradientFrom: 'blue.500',
                                 gradientTo: 'purple.500',
-                            }}
-                            
+                            }}   
                         >
-                            <Link
-                                href="/Alewi-Rhoda-Frontend-Developer-Resume.pdf" download='Alewi-Rhoda-Oyinkansola-Resume.pdf'>
-                                <Icon
-                                    as={LuDownload}
-                                    size='sm'
-                                    opacity='0'
-                                    position='absolute'
-                                    left='4'
-                                    transform="translateX(-8px)"
-                                    transition='all 0.5s ease-in-out'
-                                    _groupHover={{opacity: 1, transform: 'translateX(0)' }}
-                                />
-                                <Span
-                                    transition='all 0.5s ease-in-out' _groupHover={{ transform: 'translateX(14px)' }}
-                                >
-                                    Download CV
-                                </Span>
-                            </Link>
+                            <Icon
+                                as={LuDownload}
+                                size='sm'
+                                opacity='0'
+                                position='absolute'
+                                left='4'
+                                transform="translateX(-8px)"
+                                transition='all 0.5s ease-in-out'
+                                _groupHover={{opacity: 1, transform: 'translateX(0)' }}
+                            />
+                            <Span
+                                transition='all 0.5s ease-in-out' _groupHover={{ transform: 'translateX(14px)' }}
+                            >
+                                Download CV
+                            </Span>
                         </ButtonCard>
 
                         {/* Go to Contact Section Button */}
@@ -77,20 +78,18 @@ const Hero = () => {
                             variant='outline' outline='2px solid rgb(173, 70, 255)'
                             bg='transparent'
                             px={{ base: '6', md: '8' }}
-                            w='40'
                             _hover={{ bg: 'purple.500/20' }}
                         >
-                            <Link
-                                as={scrollLink}
+                            <ScrollLink
                                 to='contact'
                                 spy={true}
                                 smooth={true}
-                                duration={500}
-                                offset={-80}
+                                duration={800}
+                                offset={-50}
                             >
                                 Contact Me
                                 <Icon as={BiSolidRightArrowAlt} />
-                            </Link>
+                            </ScrollLink>
                         </ButtonCard>
                     </Flex>
                 </Box>

@@ -54,7 +54,7 @@ body {
   min-width: 20rem;
   height: 100%;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
   background-color: var(--primary-color);
   font-family: 'Fira Sans', sans-serif;
 }

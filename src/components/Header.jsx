@@ -1,4 +1,4 @@
-import { Box, Drawer, Flex, Icon, Link, IconButton, Portal, Text, VStack } from "@chakra-ui/react";
+import { Box, Drawer, Flex, Icon, IconButton, Portal, Text, VStack, Span, HStack } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { IoMenu, IoClose } from 'react-icons/io5';
@@ -53,7 +53,7 @@ const Header = () => {
                         offset={-80}
                         onSetActive={() => setActiveLink(links.id)}
                     > 
-                        <Link
+                        <Span
                             position='relative'
                             textDecor='none'
                             color={activeLink === links.id ? 'transparent' : 'gray.100'}
@@ -61,6 +61,7 @@ const Header = () => {
                             gradientFrom='purple.500'
                             gradientTo='blue.500'
                             bgClip={activeLink === links.id ? 'text' : 'none'}
+                            cursor="pointer"
                             
                             _after={{
                                 content: '""',
@@ -85,9 +86,9 @@ const Header = () => {
                                     width: '5'
                                 },
                             }}
-                            >
+                        >
                                 {links.name}
-                        </Link>
+                        </Span>
                     </ScrollLink>
                     
                 ))}
@@ -115,7 +116,7 @@ const Header = () => {
                                             onSetActive={() => setActiveLink(links.id)}
                                             style={{width: '100%'}}
                                         >
-                                            <Link
+                                            <HStack
                                                 w='full' py='2' pl='4'
                                                 fontSize='md' gap='4'
                                                 rounded='lg'
@@ -127,7 +128,7 @@ const Header = () => {
                                             >
                                                 <Icon as={links.icon} size='sm' />
                                                 <Text> {links.name} </Text>
-                                            </Link>
+                                            </HStack>
                                         </ScrollLink>
                                     ))}
                                 </VStack>

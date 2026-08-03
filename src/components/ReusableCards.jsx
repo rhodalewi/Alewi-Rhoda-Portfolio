@@ -48,6 +48,9 @@ export const ButtonCard = ({ children, gradient = true, ...props }) => {
             fontWeight='medium'
             fontSize={{base: 'sm', md: 'md'}}
             rounded='lg'
+            /* width={{ base: "auto", md: "10.5rem" }} */
+            width="fit-content"
+            alignSelf="center"
             overflow='hidden'
             transition='all 0.5s ease-in-out'
             {...props}
@@ -75,5 +78,19 @@ export const Footer = () => {
             &copy; rhodalewi {currentYear} | Designed & Coded by Rhoda Alewi
         </Text>
        
+    )
+};
+
+
+/* TEXT CARD */
+export const TextCard = ({ children, ...props }) => {
+    return (
+        <Text
+            fontSize={{ base: 'xs', md: 'sm' }}
+            lineHeight={{ base: 'tall', md: 'taller' }}
+            {...props}
+        >
+            {children}
+        </Text>
     )
 };

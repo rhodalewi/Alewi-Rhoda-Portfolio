@@ -1,6 +1,6 @@
-import { Box, Flex,  Text, Image, Group, Highlight, Link, Icon } from '@chakra-ui/react';
+import { Box, Flex, Image, Group, Highlight, Link, Icon } from '@chakra-ui/react';
 import { socialIcons } from '../data';
-import { HeadingCard, FlexCard } from './ReusableCards';
+import { HeadingCard, FlexCard, TextCard } from './ReusableCards';
 
 const About = () => {
     return (
@@ -70,14 +70,3 @@ const About = () => {
 
 export default About;
 
-const TextCard = ({ children, ...props }) => {
-    return (
-        <Text
-            fontSize={{ base: 'xs', md: 'sm' }}
-            lineHeight={{ base: 'tall', md: 'taller' }}
-            {...props}
-        >
-            {children}
-        </Text>
-    )
-};
