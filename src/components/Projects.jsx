@@ -1,7 +1,7 @@
 import { Badge, Box, Card, Flex, HStack, Icon, Image, Link, SimpleGrid, Span } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { projects } from '../data';
-import { FlexCard, HeadingCard } from './ReusableCards';
+import { FlexCard, HeadingCard } from '../Components/ReusableCards';
 import {FaArrowUpRightFromSquare, FaGithub, FaArrowRight} from 'react-icons/fa6'
 
 const ImageComponent = ({ image}) => {

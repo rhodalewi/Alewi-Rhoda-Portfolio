@@ -70,13 +70,22 @@ export const socialIcons = [
 export const projects = [
     {
         id: 1,
+        title: "Shortly",
+        description: "A responsive URL shortening web application with modern design and interactive features.",
+        languages: ['ReactJs', 'Tailwind CSS'],
+        image: ["/shortly.jpg"],
+        livelink: "https://shortly-three-iota.vercel.app/",
+        codelink: "https://github.com/rhodalewi/Shortly"
+    },
+   /*  {
+        id: 1,
         title: "MediCare",
         description: "A responsive healthcare website with modern design and interactive features.",
         languages: ['ReactJs', 'Tailwind CSS', 'NodeJs', 'ExpressJs', 'MySQL'],
         image: ["/MediCare.png"],
         livelink: "https://telemedicine-website-three.vercel.app/",
         codelink: "https://github.com/rhodalewi/MediCare"
-    },
+    }, */
     
     {
         id: 2,
